@@ -21,6 +21,11 @@ namespace Lista02WP
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+           // var lastPage = Frame.BackStack.Last().SourcePageType;
+        }
 
         private void btnComb_Click(object sender, RoutedEventArgs e)
         {

@@ -27,15 +27,54 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Margin="12,152,12,9" Grid.RowSpan="2">
             <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="72" Margin="0,10,0,0" TextWrapping="Wrap" Text="Número de bolas" VerticalAlignment="Top" Width="236" IsReadOnly="True"/>
-            <Slider x:Name="sldQtd" HorizontalAlignment="Left" Margin="8,82,0,0" VerticalAlignment="Top" Width="309" Maximum="100" Value="10" LargeChange="1" SmallChange="1" LostMouseCapture="sldQtd_LostMouseCapture"/>
-            <TextBox x:Name="txtQtd" HorizontalAlignment="Left" Height="72" Margin="307,82,0,0" TextWrapping="Wrap" Text="10" VerticalAlignment="Top" Width="149" IsReadOnly="True"/>
-            <Button x:Name="btnSortear" Content="Sortear" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="436"/>
-            <Button x:Name="btnNG" Content="Novo Jogo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="276,525,0,0" Width="180"/>
-            <phone:LongListSelector x:Name="llResult" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="10,221,0,0"/>
+            <Slider x:Name="sldQtd" HorizontalAlignment="Left" Margin="8,82,0,0" VerticalAlignment="Top" Width="309" Maximum="10" Value="1" LargeChange="1" SmallChange="1" ValueChanged="sldQtd_ValueChanged"/>
+            <TextBox x:Name="txtQtd" HorizontalAlignment="Left" Height="72" Margin="307,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" IsReadOnly="True" Text="10"/>
+            <Button x:Name="btnSortear" Content="Sortear" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="436" Click="btnSortear_Click"/>
+            <Button x:Name="btnNG" Content="Novo Jogo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="266,12,0,0" Width="180" Click="btnNG_Click"/>
+            <Grid Height="30" Grid.Column="0" Background="#c9c9c9" Margin="0,221,0,356">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="0" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="0"></TextBlock>
+                <TextBlock Text="1" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="1"></TextBlock>
+                <TextBlock Text="2" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="2"></TextBlock>
+                <TextBlock Text="3" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="3"></TextBlock>
+                <TextBlock Text="4" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="4"></TextBlock>
+                <TextBlock Text="5" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="5"></TextBlock>
+                <TextBlock Text="6" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="6"></TextBlock>
+                <TextBlock Text="7" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="7"></TextBlock>
+                <TextBlock Text="8" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="8"></TextBlock>
+                <TextBlock Text="9" TextAlignment="Center" Foreground="#7A7C79" FontWeight="Bold" Grid.Column="9"></TextBlock>
+            </Grid>
+            <ListBox x:Name="lstNumeros" Background="#7A7C79" Margin="0,256,0,10">
+                <StackPanel x:Name="stk0" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk1" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk2" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk3" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk4" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk5" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk6" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk7" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk8" Height="34" Width="446" Orientation="Horizontal" />
+                <StackPanel x:Name="stk9" Height="34" Width="446" Orientation="Horizontal" />
 
+            </ListBox>
         </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>
+    
