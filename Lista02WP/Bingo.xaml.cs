@@ -53,7 +53,7 @@ namespace Lista02WP
                 populateLstBox();
             }
 
-            if (qtd != sorteados.Length - 1) insertRandom();
+            if (qtd != sorteados.Length) insertRandom();
             else MessageBox.Show("Você já sorteou todos os números, reinicie o programa!");
             
 
@@ -72,7 +72,7 @@ namespace Lista02WP
 
         private void insertRandom()
         {
-            int value = r.Next(1, sorteados.Length);
+            int value = r.Next(0, sorteados.Length);
             if (!sorteados[value])
             {
                 qtd++;
